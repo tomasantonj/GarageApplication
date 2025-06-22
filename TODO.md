@@ -1,0 +1,13 @@
+﻿### TODO
+- Add more unit tests, for vehicle class properties and methods
+- Also make sure we have all the search features as well as the ability to list all vehicles based on various properties
+- Set defaults for vehicle properties
+- Make sure IEnumerable is implemented correctly in Garage class
+- Make sure we have the correct interfaces for the various Garage methods
+- Implement a method for emptying the garage
+- Sort out the menus so that there is a main menu and sub menus where necessary
+- Implement feature to be able to save the garage onto a file for later loading (JSON)
+- Feature: When we have parked a vehicle, the user should be notified that it was successful or not
+- Code improvements: use func/action/delegate to make the code more readable and maintainable
+- Improve on code comments as they are a bit messy atm
+- Get a better workflow with git, this is not a good workflow

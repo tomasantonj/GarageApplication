@@ -11,3 +11,4 @@
 - Code improvements: use func/action/delegate to make the code more readable and maintainable
 - Improve on code comments as they are a bit messy atm
 - Get a better workflow with git, this is not a good workflow
+- Solve all warnings, mainly null reference issues

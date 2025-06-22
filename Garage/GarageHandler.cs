@@ -9,12 +9,12 @@ namespace GarageApplication.Garage
     internal class GarageHandler
     {
         private Garage<Vehicle> _garage;
-
+        // Constructor that initializes the garage with a specified capacity, default is 20
         public GarageHandler(int capacity = 20)
         {
             _garage = new Garage<Vehicle>(capacity);
         }
-
+        // Allows adding a vehicle to the garage, returns true if successful, false if garage full
         public bool AddVehicle(Vehicle vehicle)
         {
             if (vehicle == null) throw new ArgumentNullException(nameof(vehicle));
@@ -25,23 +25,23 @@ namespace GarageApplication.Garage
             }
             catch (InvalidOperationException)
             {
-                return false; // Garage is full
+                return false; 
             }
         }
-
+        // method that removes a vehicle from the garage by its registration number
         public bool RemoveVehicle(string registrationNumber)
         {
             var vehicle = FindVehicle(registrationNumber);
             if (vehicle == null) return false;
             return _garage.RemoveVehicle(vehicle);
         }
-
+        // method that finds vehicle in garage by its registration number
         public Vehicle? FindVehicle(string registrationNumber)
         {
             if (string.IsNullOrWhiteSpace(registrationNumber)) return null;
             return _garage.FindVehicleByRegistration(registrationNumber);
         }
-
+        // method that lists all vehicles in the garage, optionally filtered by type
         public IEnumerable<Vehicle> ListVehicles(Type? vehicleType = null)
         {
             if (vehicleType == null || vehicleType == typeof(Vehicle))
@@ -50,15 +50,8 @@ namespace GarageApplication.Garage
             return _garage.Vehicles.Where(v => v.GetType() == vehicleType);
         }
 
-        /// <summary>
-        /// Finds vehicles matching the given properties. If vehicleType is specified, only vehicles of that type (or derived type) are returned.
-        /// </summary>
-        /// <param name="color">Color to match (case-insensitive), or null to ignore.</param>
-        /// <param name="wheelAmount">Number of wheels to match, or null to ignore.</param>
-        /// <param name="fuelType">Fuel type to match, or null to ignore.</param>
-        /// <param name="numberOfSeats">Number of seats to match, or null to ignore.</param>
-        /// <param name="vehicleType">Type of vehicle to match (e.g., typeof(Motorcycle)), or null to ignore.</param>
-        /// <returns>IEnumerable of matching vehicles.</returns>
+    
+        // Finds vehicles matching the given properties. If vehicleType is specified, only vehicles of that type are returned
         public IEnumerable<Vehicle> FindVehicleByVehicleProperties(
             string? color = null,
             int? wheelAmount = null,

@@ -5,21 +5,21 @@
   "Vehicles": [
     {
       "Type": "Car",
-      "RegistrationNumber": "ABC123",
+      "RegistrationNumber": "CAR123",
       "Color": "Red",
       "WheelAmount": 4,
       "NumberOfEngines": 1,
-      "CylinderVolume": 2.0,
+      "CylinderVolume": 1.0,
       "Fueltype": "Gasoline",
-      "NumberOfSeats": 5,
-      "Length": 4.5,
+      "NumberOfSeats": 4,
+      "Length": 5,
       "Weight": 1500.0,
       "Model": "X90",
       "Brand": "Volvo"
     },
     {
       "Type": "Motorcycle",
-      "RegistrationNumber": "GFK423",
+      "RegistrationNumber": "MCL123",
       "Color": "Black",
       "WheelAmount": 2,
       "NumberOfEngines": 1,
@@ -32,22 +32,22 @@
     },
     {
       "Type": "Airplane",
-      "RegistrationNumber": "KGA456",
+      "RegistrationNumber": "AIR123",
       "Color": "White",
       "WheelAmount": 6,
       "NumberOfEngines": 2,
-      "CylinderVolume": 10.5,
+      "CylinderVolume": 10,
       "Fueltype": "Diesel",
-      "NumberOfSeats": 150,
-      "Length": 40.0,
-      "Weight": 40000.0,
-      "WingSpan": 35,
+      "NumberOfSeats": 50,
+      "Length": 140.0,
+      "Weight": 10000.0,
+      "WingSpan": 15,
       "HasJetEngines": true
     },
     {
       "Type": "Bus",
-      "RegistrationNumber": "BUS321",
-      "Color": "Yellow",
+      "RegistrationNumber": "BUS123",
+      "Color": "Green",
       "WheelAmount": 6,
       "NumberOfEngines": 1,
       "CylinderVolume": 6.0,
@@ -59,16 +59,16 @@
     },
     {
       "Type": "Boat",
-      "RegistrationNumber": "SEA888",
+      "RegistrationNumber": "BOA123",
       "Color": "Blue",
       "WheelAmount": 0,
       "NumberOfEngines": 2,
       "CylinderVolume": 3.5,
       "Fueltype": "Gasoline",
       "NumberOfSeats": 8,
-      "Length": 8.5,
-      "Weight": 3000.0,
-      "BoatType": "Yacht"
+      "Length": 5,
+      "Weight": 2000,
+      "BoatType": "Rowboat"
     }
   ]
 }

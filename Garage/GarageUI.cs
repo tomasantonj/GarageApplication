@@ -15,7 +15,7 @@ namespace GarageApplication.Garage
         {
             _garageHandler = new GarageHandler(capacity);
         }
-
+        // main method that runs the garage UI, displaying the menu and handling user input
         public void Run()
         {
             while (true)
@@ -67,7 +67,7 @@ namespace GarageApplication.Garage
                 }
             }
         }
-
+        // UI function for adding vehicles to the garage
         private void AddVehicleUI()
         {
             Console.WriteLine("\n--- Add Vehicle ---");
@@ -103,7 +103,7 @@ namespace GarageApplication.Garage
             double.TryParse(Console.ReadLine(), out double weight);
 
             Vehicle vehicle = null;
-
+            // If a specific vehicle type is chosen, we allow to set the subclass-specific properties
             switch (typeChoice)
             {
                 case "1": // Car
@@ -148,7 +148,7 @@ namespace GarageApplication.Garage
             else
                 Console.WriteLine("Failed to add vehicle (garage may be full).");
         }
-
+        // UI function that removes a vehicle from the garage by its registration number
         private void RemoveVehicleUI()
         {
             Console.Write("\nEnter registration number to remove: ");
@@ -158,7 +158,7 @@ namespace GarageApplication.Garage
             else
                 Console.WriteLine("Vehicle not found.");
         }
-
+        // UI function that finds a vehicle by its registration number and prints its details
         private void FindVehicleUI()
         {
             Console.Write("\nEnter registration number to find: ");
@@ -169,7 +169,7 @@ namespace GarageApplication.Garage
             else
                 Console.WriteLine("Vehicle not found.");
         }
-
+        // UI function that lists all vehicles in the garage, printing their details
         private void ListVehiclesUI()
         {
             Console.WriteLine("\n--- All Vehicles ---");

@@ -11,5 +11,6 @@ namespace GarageApplication.Garage
         void AddVehicle(T vehicle);
         bool RemoveVehicle(T vehicle);
         T? FindVehicleByRegistration(string registrationNumber);
+        void Reset();
     }
 }

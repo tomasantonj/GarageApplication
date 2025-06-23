@@ -88,5 +88,11 @@ namespace GarageApplication.Garage
             _garage = new Garage<Vehicle>(newCapacity);
             return true;
         }
+
+        // Resets the garage by removing all vehicles
+        public void ResetGarage()
+        {
+            _garage.Reset();
+        }
     }
 }

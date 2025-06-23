@@ -41,6 +41,11 @@ namespace GarageApplication.Garage
         {
             return _vehicles.Find(v => v.RegistrationNumber.Equals(registrationNumber, StringComparison.OrdinalIgnoreCase));
         }
+        // Removes all vehicles from the garage
+        public void Reset()
+        {
+            _vehicles.Clear();
+        }
         // Returns an enumerator that iterates through vehicles
         public IEnumerator<T> GetEnumerator()
         {

@@ -29,6 +29,7 @@ namespace GarageApplication.Garage
                 Console.WriteLine("6. Import Test Data");
                 Console.WriteLine("7. Show Vehicle types");
                 Console.WriteLine("8. Create New Garage");
+                Console.WriteLine("9. Reset Garage (Remove All Vehicles)");
                 Console.WriteLine("0. Exit");
                 Console.Write("Select an option: ");
                 var input = Console.ReadLine();
@@ -58,6 +59,9 @@ namespace GarageApplication.Garage
                         break;
                     case "8":
                         CreateNewGarageUI();
+                        break;
+                    case "9":
+                        ResetGarageUI();
                         break;
                     case "0":
                         return;
@@ -361,6 +365,22 @@ namespace GarageApplication.Garage
             else
             {
                 Console.WriteLine("Invalid capacity. Please enter a positive number.");
+            }
+        }
+
+        // UI function to reset the garage (removes all vehicles from garage)
+        private void ResetGarageUI()
+        {
+            Console.Write("Are you sure you want to remove all vehicles from the garage? (yes/no): ");
+            var input = Console.ReadLine();
+            if (input?.Trim().Equals("yes", StringComparison.OrdinalIgnoreCase) == true)
+            {
+                _garageHandler.ResetGarage();
+                Console.WriteLine("All vehicles have been removed from the garage.");
+            }
+            else
+            {
+                Console.WriteLine("Garage reset cancelled.");
             }
         }
     }
